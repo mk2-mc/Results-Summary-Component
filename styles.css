@@ -173,13 +173,6 @@ h2 {
     var(--royal-blue));  
 }
 
-.continue-button:hover {
-  cursor: pointer;
-  background-image: linear-gradient(
-    var(--slate-blue),
-    var(--royal-blue));
-}
-
 @media only screen and (min-width: 43.75em) {
   body {
     display: flex;
