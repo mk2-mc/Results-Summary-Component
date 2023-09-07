@@ -1,0 +1,228 @@
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  
+  --light-red-alpha: hsla(0, 100%, 67%, 5%);
+  --orange-yellow-alpha: hsla(39, 100%, 56%, 5%);
+  --green-teal-alpha: hsla(166, 100%, 37%, 5%);
+  --cobalt-blue-alpha: hsla(234, 85%, 45%, 5%);
+ 
+  --slate-blue: hsl(252, 100%, 67%);
+  --royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  
+  --pale-blue: hsl(221, 100%, 96%);
+  --lavender: hsl(241, 100%, 89%);
+  --dark-blue: hsl(224, 30%, 27%);
+  
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  background-color: var(--white);
+  color: var(--lavender);
+}
+
+h2, h3, .result-score {
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.bg-red {
+  background-color: var(--light-red-alpha);
+  color: var(--light-red);
+}
+
+.bg-yellow {
+  background-color: var(--orange-yellow-alpha);
+  color: var(--orange-yellow); 
+}
+
+.bg-green {
+  background-color: var(--green-teal-alpha);
+  color: var(--green-teal); 
+}
+
+.bg-blue {
+  background-color: var(--cobalt-blue-alpha);
+  color: var(--cobalt-blue); 
+}
+
+.opacity {
+  opacity: 50%;
+}
+
+.container {
+  background-color: var(--white);
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0 0 2.5rem 2.5rem;
+  background-image: linear-gradient(
+    var(--slate-blue),
+    var(--royal-blue));
+}
+
+.result-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 9rem;
+  height: 9rem;
+  margin-top: 2rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    var(--violet-blue),
+    var(--persian-blue));
+}
+
+.result-score {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.result-100 {
+  margin-top: 0.4rem;
+  opacity: 50%;
+}
+
+.result-text {
+  max-width: 85%;
+  margin-top: 1rem;
+}
+
+.summary-container {
+  padding: 2rem;
+}
+
+.summary-container h2 {
+  color: var(--dark-blue);
+}
+
+.box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem;
+  border-radius: 0.625rem;
+  font-weight: 700;
+}
+
+.box:first-of-type {
+  margin-top: 2rem;
+}
+
+.box:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.summary-score {
+  margin-left: auto;
+  color: var(--dark-blue);
+}
+
+.continue-button {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1.1rem;
+  border: none;
+  border-radius: 1.875rem;
+  background-color: var(--dark-blue);
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  color: var(--white);
+}
+
+.continue-button:focus-visible, .continue-button:hover {
+  background-image: linear-gradient(
+    var(--slate-blue),
+    var(--royal-blue));  
+}
+
+.continue-button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    var(--slate-blue),
+    var(--royal-blue));
+}
+
+@media only screen and (min-width: 43.75em) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1.125rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 46rem;
+    border-radius: 2.5rem;
+    box-shadow: 0.2rem 1.25rem 2.5rem 0.3rem var(--pale-blue);
+  }
+  
+  .result-container {
+    border-radius: 2.5rem;
+    width: 50%;
+  }
+  
+  .result-circle {
+    width: 12rem;
+    height: 12rem;
+  }
+  
+  .result-score {
+    font-size: 4.375rem;
+  }
+  
+  .summary-container {
+    width: 50%;
+  }
+  
+  .continue-button {
+    margin-top: 2rem;
+  }
+}
