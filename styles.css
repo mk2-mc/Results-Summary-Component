@@ -125,14 +125,14 @@ h2 {
   color: var(--clr-neutral-700);
 }
 
-.summary-container {
+.summary-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
 }
 
-.summary-box {
+.summary-item {
   display: flex;
   justify-content: flex-start;
   align-items: center;

@@ -1,4 +1,4 @@
-const summary = document.querySelectorAll(".summary-box");
+const summary = document.querySelectorAll(".summary-item");
 const result = document.querySelector(".result-value");
 let scoresCount = 0;
 let scoresTotal = 0;
