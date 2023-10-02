@@ -18,7 +18,7 @@
   --clr-gradient-2: hsl(241, 81%, 54%);
   --clr-gradient-3: hsla(256, 72%, 46%, 1);
   --clr-gradient-4: hsla(241, 72%, 46%, 0);
-  
+
   --ff-base: 'Hanken Grotesk', sans-serif;
 }
 
@@ -43,28 +43,24 @@ h2 {
   line-height: 1;
 }
 
-.bg-accent-1 {
+.accent-1 {
   background-color: var(--clr-accent-1-alpha);
   color: var(--clr-accent-1);
 }
 
-.bg-accent-2 {
+.accent-2 {
   background-color: var(--clr-accent-2-alpha);
   color: var(--clr-accent-2); 
 }
 
-.bg-accent-3 {
+.accent-3 {
   background-color: var(--clr-accent-3-alpha);
   color: var(--clr-accent-3); 
 }
 
-.bg-accent-4 {
+.accent-4 {
   background-color: var(--clr-accent-4-alpha);
   color: var(--clr-accent-4); 
-}
-
-.opacity {
-  opacity: 50%;
 }
 
 .results-summary {
@@ -79,7 +75,7 @@ h2 {
   text-align: center;
   border-radius: 0 0 2rem 2rem;
   background-image: linear-gradient(
-    var(--clr-gradient-1),
+    var(--clr-gradient-1), 
     var(--clr-gradient-2));
 }
 
@@ -93,7 +89,7 @@ h2 {
   margin-top: 2rem;
   border-radius: 50%;
   background-image: linear-gradient(
-    var(--clr-gradient-3),
+    var(--clr-gradient-3), 
     var(--clr-gradient-4));
 }
 
@@ -129,6 +125,13 @@ h2 {
   color: var(--clr-neutral-700);
 }
 
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 .summary-box {
   display: flex;
   justify-content: flex-start;
@@ -139,20 +142,19 @@ h2 {
   font-weight: 700;
 }
 
-.summary-box:first-of-type {
-  margin-top: 2rem;
-}
-
-.summary-box:not(:first-of-type) {
-  margin-top: 1rem;
-}
-
 .summary-score {
   margin-left: auto;
+  font-weight: 800;
   color: var(--clr-neutral-700);
 }
 
-.continue-button {
+.summary-score::after {
+  content: "/ 100";
+  margin-left: 0.5rem;
+  opacity: 50%;
+}
+
+.button {
   cursor: pointer;
   width: 100%;
   margin-top: 1.5rem;
@@ -167,7 +169,8 @@ h2 {
   color: var(--clr-neutral-100);
 }
 
-.continue-button:focus-visible, .continue-button:hover {
+.button:focus-visible, 
+.button:hover {
   background-image: linear-gradient(
     var(--clr-gradient-1),
     var(--clr-gradient-2));  
@@ -219,7 +222,7 @@ h2 {
     padding: 2.5rem;
   }
   
-  .continue-button {
+  .button {
     margin-top: 2.5rem;
   }
 }
