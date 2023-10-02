@@ -11,6 +11,7 @@ const getData = async () => {
   summary.forEach((item, i) => {
     const img = document.createElement("img");
     img.src = data[i].icon;
+    img.alt = "";
     item.insertAdjacentElement("afterbegin", img);
 
     item.querySelector(".summary-name").innerHTML = data[i].category;
